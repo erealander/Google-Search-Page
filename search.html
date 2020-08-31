@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<style>
+    .topnav{
+        display: inline-block;
+        position:absolute;
+        top: 0%;
+        width: 100%;
+        margin-right: 30px;
+        border-bottom-color: lightgray;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        padding-bottom: 57px;
+    }
+    .navbar a{
+        color: rgb(36, 36, 36);
+        font-family: Arial, Helvetica, sans-serif;
+        vertical-align: center;
+        text-decoration:none;
+        font-size: 13px;
+        margin: 10px;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3, 4px);
+        grid-template-rows: repeat(3, 4px);
+        grid-gap: 2px;
+        margin: 13px;
+        margin-top: 21px;
+        margin-right:24px;
+        }
+    .cell{
+        justify-content: center;
+        align-items:center;
+        display: flex;
+        font-size: 0px;
+        background: rgb(110, 110, 110);
+        border-radius: 20px 20px 20px 20px;
+        }
+    .active{
+        margin-top: 13px;
+        margin-right: 34px;
+        height: 20px;
+        width: 20px;
+        text-decoration:none;
+        text-align:center;
+        font-size: 17.5px;
+        color: white;
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: rgb(72, 94, 94);
+        border-radius: 20px 20px 20px 20px;
+        padding: 6px;
+    }
+    .subnav{
+        display: block;
+        position: fixed;
+        top: 90px;
+        left: 192px;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .subnav a{
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: rgb(94, 94, 94);
+        padding-right: 40px;
+    }
+    #center{
+        padding-right: 20px!important;
+    }
+    .topfoot{
+        position: fixed;
+        display: block;
+        bottom: 0;
+        width: 100%;
+        list-style-type: none;
+        background-color: rgb(243, 241, 241);
+        padding-bottom: 24px;
+        height:43px;
+        line-height: 0px;
+        padding-right: 5px;
+    }
+    .topfoot ul{
+        list-style-type: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: rgb(94, 94, 94);
+        margin-left: 146px;
+    }
+    .loc{
+        display: grid;
+        position:fixed;
+        bottom: 0;
+        height: 48px;
+        padding-bottom: 10px;
+        margin-left: 172px;
+        grid-template-columns: repeat(1, 10px);
+        grid-template-rows: repeat(1, 10px);
+        padding-right: 5px;
+        }
+    .circ{
+        justify-content: center;
+        align-items:center;
+        display: flex;
+        font-size: 0px;
+        background: rgb(153, 153, 153);
+        border-radius: 20px 20px 20px 20px;
+    }
+    .bottomfoot{
+        position: fixed;
+        display:block;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 11px;
+        left: 180px;
+    }
+    .bottomfoot a{
+        text-decoration:none;
+        color: rgb(94, 94, 94);
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:14px;
+        padding-right: 23px;
+    }
+    #logo{
+            position: fixed;
+            top: 4.081%;
+            width: 6.326%;
+            left: 24.4px;
+            height: auto;
+    }
+    .input-icons{
+            display: flex;
+            width: 360px;
+            margin-bottom:15px;
+        }
+        .input-field{
+            position:fixed;
+            top: 2.9%!important;
+            left: 160px;
+            width: 45.95%;
+            padding: 14.2px;
+            text-align: left;
+            background-color: white;
+            border-style: solid;
+            border-width: 0.5px;
+            border-color: rgb(231, 231, 231);
+            border-radius: 50px;
+        }
+        .input-field:focus{
+            outline:none;
+        }
+
+</style>
+
+<body>
+    <!-- Top NavBar-->
+    <div class="topnav">
+        <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">    
+        <form action="/action_page.php">    
+            <div class="input-icons">
+                <!--
+                <i class="fa fa-search"></i>-->
+                <input class="input-field" type="text">
+            </div>
+        </form>
+        <a href="#signin" class="active" style="float:right;">E</a>
+        <a href="#grid"></a>
+            <div class="grid" style="float:right;">
+                <div class="cell" id="1">1</div>
+                <div class="cell" id="2">2</div>
+                <div class="cell" id="3">3</div>
+                <div class="cell" id="4">4</div>
+                <div class="cell" id="5">5</div>
+                <div class="cell" id="6">6</div>
+                <div class="cell" id="7">7</div>
+                <div class="cell" id="8">8</div>
+                <div class="cell" id="9">9</div>
+            </div>
+    </div>        
+    
+    <!--Sub-navbar-->
+    <div class="subnav">
+            <a href="#all">All</a>
+            <a href="#News">News</a>
+            <a href="#Maps">Maps</a>
+            <a href="#Videos">Videos</a>
+            <a href="#Shopping">Shopping</a>
+            <a href="#More">More</a>
+            <a href="blank"></a>
+            <a id="center" href="blank"></a>
+            <a id="center" href="#settings">Settings</a>
+            <a id="center" href="#tools">Tools</a>
+    </div>
+
+
+    <!--Bottom NavBar-->
+    <div class="topfoot">
+            <a href="location"></a>
+                <div class="loc">
+                    <div class="circ" id="1">1</div>
+                </div>
+        <ul>
+            <li><strong>05464, Vermont</strong> - Based on your past activity - Use Precise location - Learn more</li>
+        </ul>
+    </div>
+    <div class="bottomfoot">
+        <a href="advert">Help</a>
+        <a href="bus">Send feedback</a>
+        <a href="search">Privacy</a>
+        <a href="settings">Terms</a>
+    </div>
+</body>
+
+</html>
